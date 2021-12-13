@@ -8,11 +8,14 @@ android {
     compileSdkVersion 31
     buildToolsVersion "30.0.3"
 
+    testBuildType "debug"
+
     testOptions {
         unitTests {
             includeAndroidResources = true
         }
     }
+
 
 
     defaultConfig {
@@ -38,6 +41,19 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    flavorDimensions 'versions'
+    productFlavors {
+        fake {
+            dimension 'versions'
+            versionNameSuffix '.fake'
+        }
+        paid {
+            dimension 'versions'
+            versionNameSuffix '.paid'
+        }
+    }
+
+
 }
 
 dependencies {

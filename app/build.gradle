@@ -5,7 +5,8 @@ plugins {
 }
 
 android {
-    compileSdk 31
+    compileSdkVersion 31
+    buildToolsVersion "30.0.3"
 
     testOptions {
         unitTests {
@@ -17,7 +18,7 @@ android {
     defaultConfig {
         applicationId "com.example.robolectrictests"
         minSdk 24
-        targetSdk 31
+        targetSdk 30
         versionCode 1
         versionName "1.0"
 
@@ -51,6 +52,7 @@ dependencies {
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
     implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.5.20'
+
 
 //Test
     testImplementation 'junit:junit:4.13.2'

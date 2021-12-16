@@ -19,6 +19,8 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
+        appContext.startActivity(appContext.packageManager.getLaunchIntentForPackage(appContext.packageName))
+        //appContext.startActivity("com.")
         assertEquals("com.example.robolectrictests", appContext.packageName)
     }
 }

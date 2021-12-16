@@ -92,4 +92,8 @@ dependencies {
 
     implementation 'net.bytebuddy:byte-buddy:1.9.7'
 
+    //UI Automator
+    androidTestImplementation 'androidx.test.uiautomator:uiautomator:2.2.0'
+
+
 }
